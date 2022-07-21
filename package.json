@@ -2,25 +2,27 @@
   "name": "weathercli",
   "version": "1.0.0",
   "description": "A CLI to get the weather from openWeatherMap",
-  "main": "bin/index.js",
+  "main": "bin/src/index.js",
   "scripts": {
     "build": "tsc",
-    "postbuild": "chmod +x ./bin/index.js"
+    "postbuild": "chmod +x ./bin/src/index.js"
   },
   "keywords": [
     "cli",
     "weahter"
   ],
   "bin": {
-    "weather": "./bin/index.js"
+    "weather": "./bin/src/index.js"
   },
   "author": "Max Stricker",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "chalk": "^4.0.1"
+    "chalk": "^4.0.1",
+    "inquirer": "^8.0.0"
   },
   "devDependencies": {
+    "@types/inquirer": "^8.2.1",
     "@types/node": "^18.0.4",
     "@types/yargs": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
