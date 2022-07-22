@@ -12,8 +12,6 @@ const API_RUL = 'https://api.openweathermap.org/data/2.5/'
 const conf = new Conf()
 const apiKey = conf.get('API_KEY')
 
-
-
 if (process.argv[2] === ('--init' || '-i')) {
   init()
 } else {
@@ -21,7 +19,7 @@ if (process.argv[2] === ('--init' || '-i')) {
     console.log(chalk.red('please initialize the tool via --init'))
     process.exit()
   }
-  const city = conf.get('FAV') ?? process.argv[2]
+  const city = process.argv[2] ?? conf.get('FAV') 
 
   if (!city) console.log(chalk.red('provide a city name or set a favourite'))
 
