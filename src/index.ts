@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { RawWeatherData } from './rawWeatherData.interface'
 import parseWeatherData from './util/parseWeatherData'
-import { genOutput } from './util/genOutput'
+import { printOutput } from './util/printOutput'
 import Conf from 'conf'
 import { init } from './util/init'
 import chalk from 'chalk'
@@ -23,10 +23,11 @@ if (process.argv[2] === ('--init' || '-i')) {
 
   if (!city) console.log(chalk.red('provide a city name or set a favourite'))
 
+
   axios.get<RawWeatherData>(
     `${API_RUL}weather?appid=${apiKey}&units=metric&lang=de&q=${city}`
   ).then(response => {
-    console.log(genOutput(parseWeatherData(response.data)))
+    printOutput(parseWeatherData(response.data))
   }).catch(e => {
     console.log(JSON.stringify(e, null, 2))
   })

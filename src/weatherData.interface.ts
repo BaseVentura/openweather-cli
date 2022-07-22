@@ -7,5 +7,6 @@ export interface WeatherData {
   temp_max: number;
   pressure: number;
   humidity: number;
-  time: string;
+  clouds: number;
+  wind: number;
 }
