@@ -1,17 +1,14 @@
 # OpenWeather Map CLI
 This is a comamnd line interface for getting weather inforamation via https://home.openweathermap.org.
 
-To use the cli you need a free API key.
+To use the cli you will need a free API key.
 
-## Iteration one 
-In This version the api key is hard coded into a config file. 
+## Usage
 
-Since the package is not on npm ist needs to be installed from source:
+Since the tool is not published to npm u need install it via source: 
 
-1. get the source
-2. add your api key in weather.config.json
-3. install the tool: `npm i -g`
-
-Then call the app via: 
-
-`weather: <cityName>`
+1. clone the repository
+2. build the project: `npm run build`
+3. install the tool globally: `npm i -g`
+4. initialize the cli on fist use: `wheather --init`
+5. get the weather for yout favourite city or provide a cityName: `weather <cityname>`
