@@ -27,13 +27,6 @@ npm run build
 npm install -g .
 ```
 
-### Via npm (coming soon)
-
-Once published to npm, you'll be able to install with:
-```bash
-npm install -g openweather-cli
-```
-
 ## Setup
 
 First time setup - initialize the CLI with your OpenWeatherMap API key:
@@ -152,10 +145,6 @@ weather --init
 
 ### "City not found"
 Check the spelling and try again. The API uses city names from OpenWeatherMap's database.
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues and pull requests.
 
 ## License
 
