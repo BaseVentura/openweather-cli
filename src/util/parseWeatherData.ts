@@ -1,5 +1,5 @@
-import { WeatherData } from '../weatherData.interface'
-import { RawWeatherData } from '../rawWeatherData.interface'
+import type { WeatherData } from '../weatherData.interface.js'
+import type { RawWeatherData } from '../rawWeatherData.interface.js'
 /* eslint-disable camelcase */
 function parseWeatherData (rawData: RawWeatherData): WeatherData {
   const { name, main, weather } = rawData

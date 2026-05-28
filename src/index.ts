@@ -1,18 +1,18 @@
 #! /usr/bin/env node
 import axios from 'axios'
-import { RawWeatherData } from './rawWeatherData.interface'
-import parseWeatherData from './util/parseWeatherData'
-import { printOutput } from './util/printOutput'
-import Conf from 'conf'
-import { init } from './util/init'
+import type { RawWeatherData } from './rawWeatherData.interface.js'
+import parseWeatherData from './util/parseWeatherData.js'
+import { printOutput } from './util/printOutput.js'
+import Configstore from 'configstore'
 import chalk from 'chalk'
+import { init } from './util/init.js'
 
 // const apiKey = config.OPEN_WEATHER_API_KEY
 const API_RUL = 'https://api.openweathermap.org/data/2.5/'
-const conf = new Conf()
+const conf = new Configstore('openweather-cli')
 const apiKey = conf.get('API_KEY')
 
-if (process.argv[2] === ('--init' || '-i')) {
+if (process.argv[2] === '--init' || process.argv[2] === '-i') {
   init()
 } else {
   if (!apiKey) {

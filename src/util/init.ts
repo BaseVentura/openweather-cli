@@ -1,6 +1,6 @@
-import inquirer from 'inquirer'
-import Conf from 'conf'
-const conf = new Conf()
+import inquirer, { type Answers } from 'inquirer'
+import Configstore from 'configstore'
+const conf = new Configstore('openweather-cli')
 export const init = () => {
   const questions = [
     {
@@ -25,7 +25,7 @@ export const init = () => {
       type: 'input',
       name: 'fav',
       message: 'enter a city name: ',
-      when (answers: inquirer.Answers) {
+      when (answers: Answers) {
         return !answers.setFavs
       }
     }

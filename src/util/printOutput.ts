@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { WeatherData } from '../weatherData.interface'
+import type { WeatherData } from '../weatherData.interface.js'
 import chalk from 'chalk'
 
 export const printOutput = (data: WeatherData) => {
